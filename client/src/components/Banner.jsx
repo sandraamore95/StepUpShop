@@ -5,8 +5,7 @@ export default function Banner() {
   return (
     <div className="banner" style={{ 
         backgroundImage: 'url("https://okdiario.com/coolthelifestyle/img/2021/08/19/220877195_990101775084681_6015254614178452327_n-1.jpg")',
-        backgroundSize: 'cover',
-        height: '300px',
+       
       }}>
         <div className="banner-content text-white">
         

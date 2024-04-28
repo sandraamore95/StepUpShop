@@ -1,6 +1,7 @@
 .banner {
     background-size: cover;
     height: 300px;
+    margin-top: 30px;
 }
 
 .banner-content {

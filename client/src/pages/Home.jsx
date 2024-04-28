@@ -11,12 +11,14 @@ export default function Home() {
       - SPECIALOFFERS
       - POPULAR ZAPATILLAS 
     */
-   
   return (
+   <div>
+   <Banner />
+   
     <div className="container mt-4">
-      <Banner />
+      
       <SpecialOffers />
       <PopularShoes />
-    </div>
+    </div></div>
   );
 }

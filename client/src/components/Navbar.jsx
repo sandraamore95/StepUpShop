@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SearchBar from './SearchBar';
 
 export default function Navbar() {
   return (
@@ -23,13 +24,14 @@ export default function Navbar() {
             <li className="nav-item">
               <Link className="nav-link" to="/">Contacto</Link>
             </li>
-           
+
           </ul>
           <ul className="navbar-nav ms-auto">
-
-          <li className="nav-item">
+            <SearchBar />
+            
+            <li className="nav-item">
               <Link className="nav-link" to="/cart">
-                <i className="fas fa-shopping-cart"></i> 
+                <i className="fas fa-shopping-cart"></i>
               </Link>
             </li>
             <li className="nav-item">
