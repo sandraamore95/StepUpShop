@@ -6,6 +6,7 @@ import SearchBar from "../components/SearchBar";
 import ShoesList from "../components/ShoeList";
 import Banner from "../components/Banner";
 import SpecialOffers from "../components/SpecialOffers";
+import PopularShoes from "../components/PopularShoes";
 
 export default function Home() {
   const [shoes, setShoes] = useState([]); // declaramos un array de shoes 
@@ -67,9 +68,17 @@ export default function Home() {
     <div className="container mt-4">
       <Banner />
       <SpecialOffers />
+      <PopularShoes />
+
+
+     {/* 
       <h2 className="text-center mb-4">Catálogo</h2>
       <SearchBar onFilter={handleFilter} />
       <ShoesList filteredShoes={filteredShoes.length > 0 ? filteredShoes : shoes} />
+     
+     */}
+
+  
     </div>
   );
 }

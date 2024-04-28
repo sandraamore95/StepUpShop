@@ -31,11 +31,12 @@ export default function SpecialOffers() {
   }, []);
 
   return (
+    <div className="container mt-4">
     <div className="special-offers-container">
-    <h1 className="special-offers-title">¡Ofertas Especiales!</h1>
+    <h2 className="special-offers-title">¡Ofertas Especiales!</h2>
     <div className="shoe-slider-container">
       <ShoeSlider shoesData={allShoesWithOffer} />
     </div>
-  </div>
+  </div></div>
 );
 }

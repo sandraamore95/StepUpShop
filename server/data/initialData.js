@@ -136,6 +136,92 @@ const shoesData = [
             
         ]
     },
+    {
+        brand: 'Nike',
+        model: 'Nike Dunk Remastered',
+        size: 8,
+        price: 100,
+        color: 'White',
+        popularity:50,
+        images: [
+            'https://i8.amplience.net/i/jpl/jd_668425_a?qlt=92&w=750&h=531&v=1&fmt=auto',
+            'https://i8.amplience.net/i/jpl/jd_668425_b?qlt=92&w=750&h=531&v=1&fmt=auto',
+            'https://i8.amplience.net/i/jpl/jd_668425_c?qlt=92&w=750&h=531&v=1&fmt=auto',
+            'https://i8.amplience.net/i/jpl/jd_668425_f?qlt=92&w=750&h=531&v=1&fmt=auto'
+            
+        ]
+    },
+
+
+    {
+        brand: 'Nike',
+        model: 'Nike Dunk Remastered',
+        size: 8,
+        price: 100,
+        color: 'White',
+        popularity:50,
+        images: [
+            'https://i8.amplience.net/i/jpl/jd_668425_a?qlt=92&w=750&h=531&v=1&fmt=auto',
+            'https://i8.amplience.net/i/jpl/jd_668425_b?qlt=92&w=750&h=531&v=1&fmt=auto',
+            'https://i8.amplience.net/i/jpl/jd_668425_c?qlt=92&w=750&h=531&v=1&fmt=auto',
+            'https://i8.amplience.net/i/jpl/jd_668425_f?qlt=92&w=750&h=531&v=1&fmt=auto'
+            
+        ]
+    },
+
+
+    {
+        brand: 'Rebook',
+        model: 'Reebok Flexagon júnior',
+        size: 8,
+        price: 100,
+        color: 'White',
+        popularity:80,
+        images: [
+            'https://i8.amplience.net/i/jpl/jd_692723_a?qlt=92&w=750&h=531&v=1&fmt=auto',
+            'https://i8.amplience.net/i/jpl/jd_692723_b?qlt=92&w=750&h=531&v=1&fmt=auto',
+            'https://i8.amplience.net/i/jpl/jd_692723_c?qlt=92&w=750&h=531&v=1&fmt=auto',
+            'https://i8.amplience.net/i/jpl/jd_692723_e?qlt=92&w=750&h=531&v=1&fmt=auto'
+            
+        ]
+    },
+
+
+
+
+    {
+        brand: 'Nike',
+        model: 'Nike Air Force 1 Low',
+        size: 8,
+        price: 100,
+        color: 'White',
+        popularity:50,
+        images: [
+            'https://i8.amplience.net/i/jpl/jd_668138_a?qlt=92&w=750&h=531&v=1&fmt=auto',
+            'https://i8.amplience.net/i/jpl/jd_668138_b?qlt=92&w=750&h=531&v=1&fmt=auto',
+            'https://i8.amplience.net/i/jpl/jd_668138_c?qlt=92&w=750&h=531&v=1&fmt=auto',
+            'https://i8.amplience.net/i/jpl/jd_668138_e?qlt=92&w=750&h=531&v=1&fmt=auto'
+            
+        ]
+    },
+
+
+
+    {
+        brand: 'Nike',
+        model: 'Nike Air Force 1 Shadow Mujer',
+        size: 8,
+        price: 100,
+        color: 'White',
+        popularity:23,
+        images: [
+            'https://i8.amplience.net/i/jpl/jd_689855_a?qlt=92&w=750&h=531&v=1&fmt=auto',
+            'https://i8.amplience.net/i/jpl/jd_689855_b?qlt=92&w=750&h=531&v=1&fmt=auto',
+            'https://i8.amplience.net/i/jpl/jd_689855_c?qlt=92&w=750&h=531&v=1&fmt=auto',
+            'https://i8.amplience.net/i/jpl/jd_689855_e?qlt=92&w=750&h=531&v=1&fmt=auto'
+            
+        ]
+    },
 
     {
         brand: 'Puma',
