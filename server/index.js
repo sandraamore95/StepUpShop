@@ -1,14 +1,13 @@
 const express = require('express');
 const dotenv = require('dotenv').config();
 const cors = require('cors');
-const mongoose = require('mongoose');
+const mongoose = require('mongoose'); // Corregido
 const cookieParser = require('cookie-parser');
 const shoeRoutes = require('./routes/shoeRoutes');
 const collectionRoutes = require('./routes/collectionRoutes');
 const offersRoutes = require('./routes/offersRoutes');
 const authRoutes = require('./routes/authRoutes');
 const shoeController = require('./controllers/shoeController');
-
 const app = express();
 
 // Connection to Database
@@ -32,5 +31,10 @@ app.use('/', shoeRoutes);
 app.use('/', collectionRoutes);
 app.use('/', offersRoutes);
 
-// Export the app
-module.exports = app;
+// Port
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
+
+
