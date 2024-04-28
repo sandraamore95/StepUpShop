@@ -20,7 +20,7 @@ export default function Collection() {
     fetchCollection(); 
   },[]); 
 
-//hay muchas colecciones pero quiero sacar la mas nueva , es decir coleccion [0]
+//hay muchas colecciones pero quiero sacar la mas nueva
 // Accede solo a la primera colección
 const lastCollection  = collections.length > 0 ? collections[collections.length -1] : null;
 
