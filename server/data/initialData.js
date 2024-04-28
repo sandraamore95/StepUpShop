@@ -6,6 +6,7 @@ const shoesData = [
         size: 10,
         price: 150,
         color: 'White',
+        popularity:13,
         images: [
             'https://i8.amplience.net/i/jpl/jd_689848_a?qlt=92&w=750&h=531&v=1&fmt=auto',
             'https://i8.amplience.net/i/jpl/jd_689848_b?qlt=92&w=750&h=531&v=1&fmt=auto',
@@ -20,6 +21,7 @@ const shoesData = [
         size: 9,
         price: 100,
         color: 'Black',
+        popularity:10,
         images: [
             'https://i8.amplience.net/i/jpl/jd_702859_a?qlt=92&w=750&h=531&v=1&fmt=auto',
             'https://i8.amplience.net/i/jpl/jd_702859_b?qlt=92&w=750&h=531&v=1&fmt=auto',
@@ -33,6 +35,7 @@ const shoesData = [
         size: 8,
         price: 90,
         color: 'White',
+        popularity:0,
         images: [
             'https://i8.amplience.net/i/jpl/jd_619896_a?qlt=92&w=750&h=531&v=1&fmt=auto',
             'https://i8.amplience.net/i/jpl/jd_619896_b?qlt=92&w=750&h=531&v=1&fmt=auto',
@@ -47,6 +50,7 @@ const shoesData = [
         size: 7,
         price: 80,
         color: 'Blue',
+        popularity:2,
         images: [
             'https://i8.amplience.net/i/jpl/jd_690796_a?qlt=92&w=750&h=531&v=1&fmt=auto',
             'https://i8.amplience.net/i/jpl/jd_690796_b?qlt=92&w=750&h=531&v=1&fmt=auto',
@@ -57,10 +61,11 @@ const shoesData = [
     },
     {
         brand: 'Nike',
-        model: 'Air Max 90',
+        model: 'Air Max 97',
         size: 9,
         price: 120,
         color: 'White',
+        popularity:8,
         images: [
             'https://i8.amplience.net/i/jpl/jd_647114_a?qlt=92&w=750&h=531&v=1&fmt=auto',
             'https://i8.amplience.net/i/jpl/jd_647114_b?qlt=92&w=750&h=531&v=1&fmt=auto',
@@ -75,6 +80,7 @@ const shoesData = [
         size: 8,
         price: 150,
         color: 'Black',
+        popularity:17,
         images: [
             'https://i8.amplience.net/i/jpl/jd_680546_a?qlt=92&w=750&h=531&v=1&fmt=auto',
             'https://i8.amplience.net/i/jpl/jd_680546_b?qlt=92&w=750&h=531&v=1&fmt=auto',
@@ -89,6 +95,7 @@ const shoesData = [
         size: 9,
         price: 90,
         color: 'White',
+        popularity:24,
         images: [
             'https://i8.amplience.net/i/jpl/jd_690901_a?qlt=92&w=750&h=531&v=1&fmt=auto',
             'https://i8.amplience.net/i/jpl/jd_690901_b?qlt=92&w=750&h=531&v=1&fmt=auto',
@@ -103,6 +110,7 @@ const shoesData = [
         size: 8,
         price: 100,
         color: 'White',
+        popularity:28,
         images: [
             'https://i8.amplience.net/i/jpl/jd_687044_a?qlt=92&w=750&h=531&v=1&fmt=auto',
             'https://i8.amplience.net/i/jpl/jd_687044_b?qlt=92&w=750&h=531&v=1&fmt=auto',
@@ -113,15 +121,13 @@ const shoesData = [
     },
 
 
-
-
-
     {
         brand: 'Nike',
         model: 'Air Max 270 Children',
         size: 8,
         price: 100,
         color: 'White',
+        popularity:50,
         images: [
             'https://i8.amplience.net/i/jpl/jd_689363_a?qlt=92&w=750&h=531&v=1&fmt=auto',
             'https://i8.amplience.net/i/jpl/jd_689363_b?qlt=92&w=750&h=531&v=1&fmt=auto',
@@ -137,6 +143,7 @@ const shoesData = [
         size: 8,
         price: 100,
         color: 'White',
+        popularity:2,
         images: [
             'https://i8.amplience.net/i/jpl/jd_690794_a?qlt=92&w=750&h=531&v=1&fmt=auto',
             'https://i8.amplience.net/i/jpl/jd_690794_b?qlt=92&w=750&h=531&v=1&fmt=auto',
@@ -151,6 +158,7 @@ const shoesData = [
         size: 8,
         price: 100,
         color: 'White',
+        popularity:24,
         images: [
             'https://i8.amplience.net/i/jpl/jd_686946_a?qlt=92&w=750&h=531&v=1&fmt=auto',
             'https://i8.amplience.net/i/jpl/jd_686946_b?qlt=92&w=750&h=531&v=1&fmt=auto',
@@ -175,6 +183,19 @@ const collectionsData = [
 ];
 
 const offersData = [
+    {
+        title: 'Oferta de Verano',
+        details: '¡Descuento especial en zapatillas para el verano!',
+        includedShoes: ['180','Preseason 94 Low','Air Max 95'] // Nombres de las zapatillas incluidas
+    },
+    {
+        title: 'Oferta de Invierno',
+        details: '¡Gran venta de invierno en zapatillas!',
+        includedShoes: ['Classic Leather Hexalite'] // Nombres de las zapatillas incluidas
+    }
+];
+
+const popularShoesData = [
     {
         title: 'Oferta de Verano',
         details: '¡Descuento especial en zapatillas para el verano!',

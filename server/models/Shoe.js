@@ -6,6 +6,7 @@ const shoeSchema = new mongoose.Schema({
     size: Number,
     price: Number,
     color: String,
+    popularity:Number,
     images: [String]
 });
 
