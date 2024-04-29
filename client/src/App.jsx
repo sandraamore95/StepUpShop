@@ -18,6 +18,7 @@ import Footer from './components/Footer'
 import ShoesList from './components/ShoeList'
 import Collection from './pages/Collection'
 import Catalog from './pages/Catalog'
+import { ShoesProvider } from './context/shoesContext';
 
 axios.defaults.baseURL = 'http://localhost:8000';
 axios.defaults.withCredentials = true;
@@ -29,6 +30,7 @@ axios.defaults.withCredentials = true;
 function App() {
   return (
     <UserContextProvider>
+        <ShoesProvider>
       <Navbar />
       <Toaster position="bottom-right" toastOptions={{ duration: 2000 }} />
       <Routes>
@@ -41,6 +43,7 @@ function App() {
         <Route path="/collection"  element={<Collection />}/>
       </Routes>
       <Footer />
+      </ShoesProvider>
     </UserContextProvider>
   )
 }

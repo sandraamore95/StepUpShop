@@ -1,27 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState ,useContext } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import FilterBar from '../components/FilterBar';
+import { ShoesContext } from '../context/shoesContext';
 
 
 export default function Catalog() {
-    const [shoes, setShoes] = useState([]);
+    const { shoes } = useContext(ShoesContext);
     const [filteredShoes, setFilteredShoes] = useState([]); 
     const [currentPage, setCurrentPage] = useState(1);
     const [shoesPerPage] = useState(6);
 
     useEffect(() => {
-        const fetchCatalogShoes = async () => {
-            try {
-                const response = await axios.get(`/shoes`);
-                setShoes(response.data);
-                setFilteredShoes(response.data); 
-            } catch (error) {
-                console.error('Error al obtener las zapatillas:', error);
-            }
-        };
-        fetchCatalogShoes();
-    }, []);
+        setFilteredShoes(shoes); 
+    }, [shoes]); 
 
     const handleFilter = (brand, color) => {
         let filtered;
