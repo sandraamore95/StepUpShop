@@ -4,6 +4,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { Link } from 'react-router-dom'; // Importa el componente Link
 import {useState, useEffect } from 'react';
+import '../styles/Slider.css'
 
 const ShoeSlider = ({ shoesData }) => {
 

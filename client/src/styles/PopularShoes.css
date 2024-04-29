@@ -15,11 +15,26 @@
 }
 
 .shoe-card {
-    width: calc(25% - 20px); /* Calcula el ancho de cada tarjeta para que haya espacio para 4 columnas con un margen de 20px entre ellas */
+    width: calc(25% - 20px);
     margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+ 
     overflow: hidden;
+    position: relative;
+    transition: transform 0.2s; /* Agrega una transición suave al efecto de zoom */
+}
+
+.shoe-card:hover {
+    transform: scale(1.01); /* Aplica un aumento de escala cuando se pasa el mouse */
+}
+
+.shoe-card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s; /* Agrega la misma transición para suavizar el efecto en la imagen */
+}
+
+.shoe-card:hover img {
+    transform: scale(1.1); /* Aplica un aumento de escala adicional a la imagen cuando se pasa el mouse */
 }
 
 .shoe-card img {
