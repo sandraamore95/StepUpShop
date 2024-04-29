@@ -1,46 +1,58 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import SearchBar from "../components/SearchBar";
+import FilterBar from '../components/FilterBar';
+
+
 export default function Catalog() {
-    const [catalogShoes, setcatalogShoes] = useState([]);
+    const [shoes, setShoes] = useState([]);
+    const [filteredShoes, setFilteredShoes] = useState([]); 
     const [currentPage, setCurrentPage] = useState(1);
-    const [pageSize, setPageSize] = useState(6);
+    const [shoesPerPage] = useState(6);
 
     useEffect(() => {
         const fetchCatalogShoes = async () => {
             try {
                 const response = await axios.get(`/shoes`);
-                console.log(response.data);
-                setcatalogShoes(response.data)
+                setShoes(response.data);
+                setFilteredShoes(response.data); 
             } catch (error) {
-                console.error('Error al obtener el cstalogo de zapatillas:', error);
+                console.error('Error al obtener las zapatillas:', error);
             }
         };
-
         fetchCatalogShoes();
-    },[]);
+    }, []);
 
-    // llamar a shoeList pero pasarle todos los zapatos, y hacer una PAGINACION !!!!
-    // Calcula el índice de la primera y última zapatilla de la página actual
-    const indexOfLastShoe = currentPage * pageSize;
-    const indexOfFirstShoe = indexOfLastShoe - pageSize;
-    const currentShoes = catalogShoes.slice(indexOfFirstShoe, indexOfLastShoe);
-
-
-    const prevPage = () => {
-        setCurrentPage(currentPage - 1);
+    const handleFilter = (brand, color) => {
+        let filtered;
+        if (brand && color) {
+            filtered = shoes.filter(shoe => shoe.brand === brand && shoe.color === color);
+        } else if (brand) {
+            filtered = shoes.filter(shoe => shoe.brand === brand);
+        } else {
+            filtered = shoes;
+        }
+        setFilteredShoes(filtered);
+        setCurrentPage(1); 
     };
 
+   //PAGINACION
+    const indexOfLastShoe = currentPage * shoesPerPage;
+    const indexOfFirstShoe = indexOfLastShoe - shoesPerPage;
+    const currentShoes = filteredShoes.slice(indexOfFirstShoe, indexOfLastShoe);
 
     const nextPage = () => {
-        setCurrentPage(currentPage + 1);
+        setCurrentPage(prev => prev + 1);
+    };
+
+    const prevPage = () => {
+        setCurrentPage(prev => prev - 1);
     };
 
     return (
-
         <div className="container mt-4">
             <h2>Catálogo de Zapatillas</h2>
+            <FilterBar onFilter={handleFilter} />
             <div className="row">
                 {currentShoes.map((shoe, index) => (
                     <div key={index} className="col-md-4 mb-4">
@@ -57,8 +69,7 @@ export default function Catalog() {
             </div>
             <div className="pagination">
                 <button onClick={prevPage} disabled={currentPage === 1}>Anterior</button>
-                <span>Página {currentPage}</span>
-                <button onClick={nextPage} disabled={currentShoes.length < pageSize}>Siguiente</button>
+                <button onClick={nextPage} disabled={indexOfLastShoe >= filteredShoes.length}>Siguiente</button>
             </div>
         </div>
     );
